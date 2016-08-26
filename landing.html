@@ -9,10 +9,20 @@
   <meta name="author" content="Ephraim Wickline">
 
   <link rel="stylesheet" href="css/MetroJS.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.12.0/jquery-ui.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.12.0/jquery-ui.css"></script> 
   <script type="text/javascript" src="js/MetroJS.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#one").delay(250).toggle("bounce", { times: 3 }, "slow");
+            $("#two").delay(300).toggle("bounce", { times: 3 }, "slow");
+            $("#three").delay(350).toggle("bounce", { times: 3 }, "slow");
+            $("#four").delay(400).toggle("bounce", { times: 3 }, "slow");
+            $("#five").delay(450).toggle("bounce", { times: 3 }, "slow");
+        });
+  </script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -78,14 +88,6 @@
 <script type="text/javascript">
     // apply regular slide universally unless .exclude class is applied 
     // NOTE: The default options for each liveTile are being pulled from the 'data-' attributes
-    $(document).ready(function() {
-
-        $("#one").delay(250).toggle("bounce", { times: 3 }, "slow");
-        $("#two").delay(300).toggle("bounce", { times: 3 }, "slow");
-        $("#three").delay(350).toggle("bounce", { times: 3 }, "slow");
-        $("#four").delay(400).toggle("bounce", { times: 3 }, "slow");
-        $("#five").delay(450).toggle("bounce", { times: 3 }, "slow");
-    });
 
     $(".live-tile, .flip-list").not(".exclude").liveTile();
 </script>
