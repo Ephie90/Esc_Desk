@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Landing</title>
+  <meta name="description" content="Landing">
+  <meta name="author" content="Ephraim Wickline">
+
+  <link rel="stylesheet" href="css/MetroJS.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.12.0/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.12.0/jquery-ui.css"></script> 
+  <script type="text/javascript" src="js/MetroJS.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div id="mydiv">
+    <!-- Apply blue theme as default for all tiles, but use the tiles class to allow the theme to be swapped -->
+<div class="tiles blue tile-group three-wide">
+    <!-- Sliding Tile that shows 100% of the back tile every 3 seconds -->
+    <div id="one" class="live-tile" data-speed="750" data-delay="3000">
+        <span class="tile-title"></span>
+        <div><img class="full" src="pics/tv.png" alt="1" /></div>
+        <div style=""><h2>TV</h2></div>
+    </div>
+    <!-- Red Flip Tile that flips every 4 seconds -->
+    <div id="two" class="live-tile" data-mode="flip" data-delay="4000">            
+        <div>
+            <img class="full" src="pics/voice.png" alt="3" />
+            <span class="tile-title"></span>
+        </div>
+        <div><h2>Voice</h2></div>
+    </div>
+    <!-- Carousel Tile that slides 4 tile faces every 2.5 seconds -->
+    <div id="three" class="live-tile" data-mode="carousel" data-direction="horizontal" data-delay="2500">
+        <div>
+            <img class="full" src="pics/other.png" alt="1" />
+            <span class="tile-title"></span>
+        </div>
+        <div><h2>Other</h2></div>
+    </div>
+
+<div class="tiles blue tile-group two-wide" style="margin-left: 80px;">
+    <div id="four" class="live-tile" data-mode="fade" data-delay="2750">
+        <span class="tile-title"></span>
+        <div><img class="full" src="pics/apd.png" alt="1" /></div>
+        <div style=""><h2>All Products Down</h2></div>
+    </div>
+    <div id="five" class="list-tile">
+        <ul class="flip-list fourTiles" data-mode="flip-list" data-delay="2000">
+            <li>
+                <div><img class="full" src="pics/internet1.png" alt="1" /></div>
+                <div style="float: right;"><h2>Interne</h2></div>
+            </li>
+            <li>
+                <div><img class="full" src="pics/internet3.png" alt="2" /></div>
+                <div><h2>t</h2></div>
+            </li>
+            <li>
+                <div><img class="full" src="pics/internet2.png" alt="2" /></div>
+                <div></div>
+            </li>
+            <li>
+                <div><img class="full" src="pics/internet4.png" alt="2" /></div>
+                <div></div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<!-- Activate live tiles -->
+<script type="text/javascript">
+    // apply regular slide universally unless .exclude class is applied 
+    // NOTE: The default options for each liveTile are being pulled from the 'data-' attributes
+    $(document).ready(function() {
+
+        $("#one").delay(250).toggle("bounce", { times: 3 }, "slow");
+        $("#two").delay(300).toggle("bounce", { times: 3 }, "slow");
+        $("#three").delay(350).toggle("bounce", { times: 3 }, "slow");
+        $("#four").delay(400).toggle("bounce", { times: 3 }, "slow");
+        $("#five").delay(450).toggle("bounce", { times: 3 }, "slow");
+    });
+
+    $(".live-tile, .flip-list").not(".exclude").liveTile();
+</script>
+</body>
+</html>

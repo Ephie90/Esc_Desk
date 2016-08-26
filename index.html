@@ -35,6 +35,8 @@
             $(this).scrollTop(0);
         });
 
+        window.onwheel = function(){ return false; }
+
         $(".nav a").on("click", function(){
             $(".nav").find(".active").removeClass("active");
             $(this).parent().addClass("active");
@@ -198,8 +200,6 @@
                 <dd><a href="#">Tool</a></dd>
             </dl>
 
-            <a href="#" class="toggle">Toggle</a>
-
         </section>
         </div>
         <div style="width: 100%;" id="wish2" class="centered  skrollable  unrendered " data-1000="width:100%;" data-2000="width:0%;">
@@ -208,9 +208,13 @@
         <div style="width: 0%;" id="ribbon-left" class="ribbon skrollable  unrendered " data-1500="width:0%;" data-2500="width:50%;"></div>
         <div style="width: 0%;" id="ribbon-right" class="ribbon skrollable  unrendered " data-1500="width:0%;" data-2500="width:50%;"></div>
         <div style="height: 100%;" id="pattern1" class="centered  skrollable  unrendered " data-2500=" height:600px; " data-3500="height:0%;"></div>
-        <div id="pattern2" class="centered"></div>
-        <div style="width: 0px; height: 0px; border-radius: 100%;" id="wish3" class="centered skrollable  unrendered " data-2500="width:0%; height:0%; border-radius: 100%;  " data-6000="width:100%; height:100%; border-radius: 0%;"></div>
-        <div style="box-shadow: 0px 0px 0px rgb(231, 104, 93) inset, 0px 0px 0px rgb(231, 104, 93) inset; width: 150px;" id="info" class="centered  skrollable  unrendered " data-900="box-shadow:inset 0px 0 0 #71c5e8,inset 0px 0 0  #71c5e8" data-1000="box-shadow:inset 100px 0 0 #71c5e8, inset -100px 0 0 #71c5e8" data-1830="width:150px;" data-2000="width:0;">Scroll !</div>
+        <iframe style="position:relative; top: 70px; left: -100px; z-index: 3; float: top;" width="560" height="315" src="https://www.youtube.com/embed/nkG4Camc0nQ" frameborder="0" allowfullscreen></iframe>
+        <iframe style="position:relative; top: 70px; left: 100px; z-index: 3; float: top;" width="560" height="315" src="https://www.youtube.com/embed/oktS0SjNW7g" frameborder="0" allowfullscreen></iframe>
+                <iframe style="position:relative; top: 170px; left: -100px; z-index: 3; float: top;" width="560" height="315" src="https://www.youtube.com/embed/JTloIciAYMA" frameborder="0" allowfullscreen></iframe>
+        <iframe style="position:relative; top: 170px; left: 100px; z-index: 3; float: top;" width="560" height="315" src="https://www.youtube.com/embed/SJlaaifJX-Q" frameborder="0" allowfullscreen></iframe>
+        <div style="height: 840px;" id="pattern2" class="centered"></div>
+        <div style="width: 0px; height: 0px; border-radius: 100%;" id="wish3" class="centered skrollable  unrendered " data-2500="width:0%; height:0px; border-radius: 100%;  " data-6000="width:100%; height:840px; border-radius: 0%;"></div>
+        <div style="box-shadow: 0px 0px 0px rgb(231, 104, 93) inset, 0px 0px 0px rgb(231, 104, 93) inset; width: 150px;" id="info" class="centered  skrollable  unrendered " data-900="box-shadow:inset 0px 0 0 #71c5e8,inset 0px 0 0  #71c5e8" data-1000="box-shadow:inset 100px 0 0 #71c5e8, inset -100px 0 0 #71c5e8" data-1830="width:150px;" data-2000="width:0;">Solutions!</div>
     </div>
 
 <script src="js/skrollr.js" type="text/javascript" charset="utf-8"></script>
@@ -254,8 +258,9 @@
             });
 
             // Open all
-            
+            setTimeout(function(){
             $( '.list' ).makisu( 'open' );
+            }, 2000);   
 
             // Toggle on click
 
